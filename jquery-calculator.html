@@ -119,7 +119,7 @@
       var firstNumber = "";
       var secondNumber = "";
       var result;
-      var oper;
+      var oper = "";
       var lockCalc = false;
       var clearLock = false;
       var userInput = "";
@@ -135,7 +135,7 @@
           if ($(this).hasClass("number")) {
 
             //logs user input into first number string until operand uses
-            if (oper === undefined) {
+            if (oper === "") {
               firstNumber = firstNumber + userInput;
               console.log(firstNumber);
               $("#first-number").html(firstNumber);
@@ -190,12 +190,12 @@
           console.log("test");
           firstNumber = "";
           secondNumber = "";
-          operand = undefined;
+          oper = "";
           result = "";
           lockCalc = false;
           $("#first-number").html(firstNumber);
           $("#second-number").html(secondNumber);
-          $("#operator").html(operand);
+          $("#operator").html(oper);
           $("#result").html(result);
         }
 
